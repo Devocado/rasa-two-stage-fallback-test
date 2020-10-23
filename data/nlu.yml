@@ -1,0 +1,72 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: inform
+  examples: |
+    - my favourite color is [red](colour)
+    - [blue](colour)
+    - [green](colour)
+    - [pink](colour)
+    - [Red](colour)
+    - [Orange](colour)
+    - [Yellow](colour)
+    - [Green](colour)
+    - [Blue](colour)
+    - [Purple](colour)
+    - [Brown](colour)
+    - [Magenta](colour)
+    - [Tan](colour)
+    - [Cyan](colour)
+    - [Olive](colour)
+    - [Maroon](colour)
+    - [Navy](colour)
+    - [Aquamarine](colour)
+    - [Turquoise](colour)
+    - [Silver](colour)
+    - [Lime](colour)
+    - [Teal](colour)
+    - [Indigo](colour)
+    - [Violet](colour)
+    - [Pink](colour)
+    - [Black](colour)
+    - [White](colour)
+    - [Gray](colour)
+    - [21](number)
+    - [32](number)
+    - [5](number)
+    - [75](number)
+    - [67](number)
+    - [7](number)
+    - [9](number)
+    - [28](number)
+
+- intent: out_of_scope
+  examples: |
+    - I want a pizza
+    - What is the weather like?
+    - Who built you?
+    - Are you going to take over the world?
+    - Please do my shopping
+
+- intent: tell_joke
+  examples: |
+    - tell me a joke
+    - give me something funny
+    - Please say something funny
+    - I want a joke
+    - please crack a joke

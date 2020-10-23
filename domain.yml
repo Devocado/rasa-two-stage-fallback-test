@@ -1,0 +1,57 @@
+version: "2.0"
+
+intents:
+  - greet
+  - inform
+
+entities:
+- colour
+- number
+
+slots:
+  name:
+    type: text
+    influence_conversation: false
+  age:
+    type: float
+    min_value: 0.0
+    influence_conversation: false
+  favourite_colour:
+    type: text
+    influence_conversation: false
+
+forms:
+  example_form:
+    name:
+      - type: from_text
+        entity: name
+    age:
+      - type: from_entity
+        entity: number
+    favourite_colour:
+      - type: from_entity
+        entity: colour
+
+responses:
+  utter_ask_name:
+  - text: What is your name?
+  utter_ask_age:
+  - text: How old are you?
+  utter_ask_favourite_colour:
+  - text: What is your favourite colour?
+  utter_greet:
+  - text: Hello, I am talkbot.
+  utter_slots_values:
+  - text: Thanks, {name}. You're {age} years old and your favourite colour is {favourite_colour}
+  utter_ask_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_default:
+  - text: I'm sorry, it seems we're not understanding each other (fallback action)
+  utter_assistance:
+  - text: What can I do for you?
+  utter_joke:
+  - text: What is black and white and goes haha? The penguin that pushed him.
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
