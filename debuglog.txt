@@ -1,0 +1,306 @@
+> rasa shell --debug
+2020-10-23 14:12:28 DEBUG    rasa.model  - Extracted model to '/tmp/tmphfbt9mkg'.
+2020-10-23 14:12:33 DEBUG    rasa.cli.utils  - Parameter 'endpoints' not set. Using default location 'endpoints.yml' instead.
+2020-10-23 14:12:33 DEBUG    rasa.cli.utils  - Parameter 'credentials' not set. Using default location 'credentials.yml' instead.
+2020-10-23 14:12:33 DEBUG    rasa.model  - Extracted model to '/tmp/tmp8a4e0ujo'.
+2020-10-23 14:12:33 INFO     root  - Connecting to channel 'cmdline' which was specified by the '--connector' argument. Any other channels will be ignored. To connect to all given channels, omit the '--connector' argument.
+2020-10-23 14:12:33 DEBUG    sanic.root  - CORS: Configuring CORS with resources: {'/*': {'origins': [''], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': 'filename', 'supports_credentials': True, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/*': {'origins': ''}}, 'intercept_exceptions': True, 'always_send': True}}
+2020-10-23 14:12:33 DEBUG    rasa.core.utils  - Available web server routes: 
+/webhooks/rest                                     GET                            custom_webhook_CmdlineInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_CmdlineInput.receive
+/                                                  GET                            hello
+2020-10-23 14:12:33 INFO     root  - Starting Rasa server on http://localhost:5005
+2020-10-23 14:12:33 DEBUG    rasa.core.utils  - Using the default number of Sanic workers (1).
+2020-10-23 14:12:34 DEBUG    rasa.model  - Extracted model to '/tmp/tmpakewm38t'.
+2020-10-23 14:12:38 INFO     root  - Enabling coroutine debugging. Loop id 94203441038992.
+2020-10-23 14:12:38 DEBUG    rasa.model  - Extracted model to '/tmp/tmp2ara95ha'.
+2020-10-23 14:12:39 DEBUG    rasa.utils.tensorflow.models  - Loading the model ...
+2020-10-23 14:12:39 DEBUG    rasa.nlu.classifiers.diet_classifier  - Following metrics will be logged during training: 
+2020-10-23 14:12:39 DEBUG    rasa.nlu.classifiers.diet_classifier  -   t_loss (total loss)
+2020-10-23 14:12:39 DEBUG    rasa.nlu.classifiers.diet_classifier  -   i_acc (intent acc)
+2020-10-23 14:12:39 DEBUG    rasa.nlu.classifiers.diet_classifier  -   i_loss (intent loss)
+2020-10-23 14:12:39 DEBUG    rasa.nlu.classifiers.diet_classifier  -   e_f1 (entity f1)
+2020-10-23 14:12:39 DEBUG    rasa.nlu.classifiers.diet_classifier  -   e_loss (entity loss)
+2020-10-23 14:12:39 DEBUG    rasa.utils.tensorflow.models  - Finished loading the model.
+2020-10-23 14:12:39 DEBUG    rasa.utils.tensorflow.models  - Building tensorflow prediction graph...
+2020-10-23 14:12:43 DEBUG    rasa.utils.tensorflow.models  - Finished building tensorflow prediction graph.
+2020-10-23 14:12:43 DEBUG    rasa.nlu.classifiers.diet_classifier  - Failed to load model for 'ResponseSelector'. Maybe you did not provide enough training data and no model was trained or the path '/tmp/tmp2ara95ha/nlu' doesn't exist?
+2020-10-23 14:12:43 DEBUG    rasa.core.tracker_store  - Connected to InMemoryTrackerStore.
+2020-10-23 14:12:43 DEBUG    rasa.core.lock_store  - Connected to lock store 'InMemoryLockStore'.
+2020-10-23 14:12:43 DEBUG    rasa.model  - Extracted model to '/tmp/tmpbnh_h8px'.
+2020-10-23 14:12:43 DEBUG    rasa.utils.tensorflow.models  - Loading the model ...
+2020-10-23 14:12:43 DEBUG    rasa.utils.tensorflow.models  - Finished loading the model.
+2020-10-23 14:12:43 DEBUG    rasa.utils.tensorflow.models  - Building tensorflow prediction graph...
+2020-10-23 14:12:44 DEBUG    rasa.utils.tensorflow.models  - Finished building tensorflow prediction graph.
+2020-10-23 14:12:44 DEBUG    rasa.core.nlg.generator  - Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2020-10-23 14:12:44 INFO     root  - Rasa server is up and running.
+Bot loaded. Type a message and press enter (use '/stop' to exit): 
+Your input ->  hi                                                                                                                                                                                                  
+2020-10-23 14:12:49 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:12:49 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:12:49 DEBUG    rasa.core.lock_store  - Acquired lock for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:12:49 DEBUG    rasa.core.tracker_store  - Creating a new tracker for id '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:12:49 DEBUG    rasa.core.processor  - Starting a new session for conversation ID '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:12:49 DEBUG    rasa.core.processor  - Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7f0c34606280>, <rasa.shared.core.events.ActionExecuted object at 0x7f0c346068e0>]'.
+2020-10-23 14:12:49 DEBUG    rasa.core.processor  - Current slot values: 
+	age: None
+	favourite_colour: None
+	name: None
+	requested_slot: None
+2020-10-23 14:12:49 DEBUG    rasa.nlu.classifiers.diet_classifier  - There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2020-10-23 14:12:49 DEBUG    rasa.nlu.selectors.response_selector  - Adding following selector key to message property: default
+2020-10-23 14:12:49 DEBUG    rasa.core.processor  - Received user message 'hi' with intent '{'id': -2838915563733405349, 'name': 'greet', 'confidence': 0.9999971389770508}' and entities '[]'
+2020-10-23 14:12:49 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 4 events.
+2020-10-23 14:12:49 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}]
+2020-10-23 14:12:49 DEBUG    rasa.core.policies.memoization  - There is a memorised next action 'utter_greet'
+2020-10-23 14:12:49 DEBUG    rasa.core.policies.rule_policy  - Current tracker state: [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}]
+2020-10-23 14:12:49 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2020-10-23 14:12:49 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_0_MemoizationPolicy
+2020-10-23 14:12:49 DEBUG    rasa.core.processor  - Predicted next action 'utter_greet' with confidence 1.00.
+2020-10-23 14:12:49 DEBUG    rasa.core.processor  - Action 'utter_greet' ended with events '[BotUttered('Hello, I am talkbot.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_greet"}, 1603455169.5042338)]'.
+2020-10-23 14:12:49 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}]
+2020-10-23 14:12:49 DEBUG    rasa.core.policies.memoization  - There is a memorised next action 'example_form'
+2020-10-23 14:12:49 DEBUG    rasa.core.policies.rule_policy  - Current tracker state: [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}]
+2020-10-23 14:12:49 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2020-10-23 14:12:49 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_0_MemoizationPolicy
+2020-10-23 14:12:49 DEBUG    rasa.core.processor  - Predicted next action 'example_form' with confidence 1.00.
+2020-10-23 14:12:49 DEBUG    rasa.core.actions.forms  - Activated the form 'example_form'.
+2020-10-23 14:12:49 DEBUG    rasa.core.actions.forms  - No pre-filled required slots to validate.
+2020-10-23 14:12:49 DEBUG    rasa.core.actions.forms  - Validating user input 'UserUttered(text: hi, intent: {'id': -2838915563733405349, 'name': 'greet', 'confidence': 0.9999971389770508}, entities: [])'.
+2020-10-23 14:12:49 DEBUG    rasa.core.actions.forms  - Validating extracted slots: {}
+2020-10-23 14:12:49 DEBUG    rasa.core.actions.forms  - Request next slot 'name'
+2020-10-23 14:12:49 DEBUG    rasa.core.processor  - Action 'example_form' ended with events '[<rasa.shared.core.events.ActiveLoop object at 0x7f0c34329370>, <rasa.shared.core.events.SlotSet object at 0x7f0c3c617610>, BotUttered('What is your name?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_ask_name"}, 1603455169.5113034)]'.
+2020-10-23 14:12:49 DEBUG    rasa.core.processor  - Current slot values: 
+	age: None
+	favourite_colour: None
+	name: None
+	requested_slot: name
+2020-10-23 14:12:49 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'example_form'}, 'active_loop': {'name': 'example_form'}}]
+2020-10-23 14:12:49 DEBUG    rasa.core.policies.memoization  - There is a memorised next action 'action_listen'
+2020-10-23 14:12:49 DEBUG    rasa.core.policies.rule_policy  - Predicted 'action_listen' after loop 'example_form'.
+2020-10-23 14:12:49 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_2_RulePolicy
+2020-10-23 14:12:49 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2020-10-23 14:12:49 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2020-10-23 14:12:49 DEBUG    rasa.core.lock_store  - Deleted lock for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+Hello, I am talkbot.
+What is your name?
+Your input ->  jake                                                                                                                                                                                                
+2020-10-23 14:12:52 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:12:52 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:12:52 DEBUG    rasa.core.lock_store  - Acquired lock for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:12:52 DEBUG    rasa.core.tracker_store  - Recreating tracker for id '5bd3b569276c4441ba8181d38fe73d68'
+2020-10-23 14:12:52 DEBUG    rasa.nlu.classifiers.diet_classifier  - There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2020-10-23 14:12:52 DEBUG    rasa.nlu.selectors.response_selector  - Adding following selector key to message property: default
+2020-10-23 14:12:52 DEBUG    rasa.core.processor  - Received user message 'jake' with intent '{'id': -3579625841406294560, 'name': 'tell_joke', 'confidence': 0.981124997138977}' and entities '[]'
+2020-10-23 14:12:52 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 12 events.
+2020-10-23 14:12:52 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'example_form'}, 'active_loop': {'name': 'example_form'}}, {'user': {'intent': 'tell_joke'}, 'prev_action': {'action_name': 'action_listen'}, 'active_loop': {'name': 'example_form'}}]
+2020-10-23 14:12:52 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2020-10-23 14:12:52 DEBUG    rasa.core.policies.rule_policy  - Predicted loop 'example_form'.
+2020-10-23 14:12:52 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_2_RulePolicy
+2020-10-23 14:12:52 DEBUG    rasa.core.processor  - Predicted next action 'example_form' with confidence 1.00.
+2020-10-23 14:12:52 DEBUG    rasa.core.actions.forms  - Validating user input 'UserUttered(text: jake, intent: {'id': -3579625841406294560, 'name': 'tell_joke', 'confidence': 0.981124997138977}, entities: [])'.
+2020-10-23 14:12:52 DEBUG    rasa.core.actions.forms  - Trying to extract requested slot 'name' ...
+2020-10-23 14:12:52 DEBUG    rasa.core.actions.forms  - Got mapping '{'type': 'from_text', 'entity': 'name'}'
+2020-10-23 14:12:52 DEBUG    rasa.core.actions.forms  - Successfully extracted 'jake' for requested slot 'name'
+2020-10-23 14:12:52 DEBUG    rasa.core.actions.forms  - Validating extracted slots: {'name': 'jake'}
+2020-10-23 14:12:52 DEBUG    rasa.core.actions.forms  - Request next slot 'age'
+2020-10-23 14:12:52 DEBUG    rasa.core.processor  - Action 'example_form' ended with events '[<rasa.shared.core.events.SlotSet object at 0x7f0c2c5a3c40>, <rasa.shared.core.events.SlotSet object at 0x7f0c2c69ef40>, BotUttered('How old are you?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_ask_age"}, 1603455172.4248946)]'.
+2020-10-23 14:12:52 DEBUG    rasa.core.processor  - Current slot values: 
+	age: None
+	favourite_colour: None
+	name: jake
+	requested_slot: age
+2020-10-23 14:12:52 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'example_form'}, 'active_loop': {'name': 'example_form'}}]
+2020-10-23 14:12:52 DEBUG    rasa.core.policies.memoization  - There is a memorised next action 'action_listen'
+2020-10-23 14:12:52 DEBUG    rasa.core.policies.rule_policy  - Predicted 'action_listen' after loop 'example_form'.
+2020-10-23 14:12:52 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_2_RulePolicy
+2020-10-23 14:12:52 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2020-10-23 14:12:52 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2020-10-23 14:12:52 DEBUG    rasa.core.lock_store  - Deleted lock for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+How old are you?
+Your input ->  39                                                                                                                                                                                                  
+2020-10-23 14:12:58 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:12:58 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:12:58 DEBUG    rasa.core.lock_store  - Acquired lock for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:12:58 DEBUG    rasa.core.tracker_store  - Recreating tracker for id '5bd3b569276c4441ba8181d38fe73d68'
+2020-10-23 14:12:58 DEBUG    rasa.nlu.classifiers.diet_classifier  - There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2020-10-23 14:12:58 DEBUG    rasa.nlu.selectors.response_selector  - Adding following selector key to message property: default
+2020-10-23 14:12:58 DEBUG    rasa.core.processor  - Received user message '39' with intent '{'id': 1413644820575064777, 'name': 'inform', 'confidence': 0.9999998211860657}' and entities '[{'entity': 'number', 'start': 0, 'end': 2, 'confidence_entity': 0.9994872808456421, 'value': '39', 'extractor': 'DIETClassifier'}]'
+2020-10-23 14:12:58 DEBUG    rasa.core.processor  - Current slot values: 
+	age: None
+	favourite_colour: None
+	name: jake
+	requested_slot: age
+2020-10-23 14:12:58 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 18 events.
+2020-10-23 14:12:58 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'example_form'}, 'active_loop': {'name': 'example_form'}}, {'user': {'intent': 'inform', 'entities': ('number',)}, 'prev_action': {'action_name': 'action_listen'}, 'active_loop': {'name': 'example_form'}}]
+2020-10-23 14:12:58 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2020-10-23 14:12:58 DEBUG    rasa.core.policies.rule_policy  - Predicted loop 'example_form'.
+2020-10-23 14:12:58 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_2_RulePolicy
+2020-10-23 14:12:58 DEBUG    rasa.core.processor  - Predicted next action 'example_form' with confidence 1.00.
+2020-10-23 14:12:58 DEBUG    rasa.core.actions.forms  - Validating user input 'UserUttered(text: 39, intent: {'id': 1413644820575064777, 'name': 'inform', 'confidence': 0.9999998211860657}, entities: [{'entity': 'number', 'start': 0, 'end': 2, 'confidence_entity': 0.9994872808456421, 'value': '39', 'extractor': 'DIETClassifier'}])'.
+2020-10-23 14:12:58 DEBUG    rasa.core.actions.forms  - Trying to extract requested slot 'age' ...
+2020-10-23 14:12:58 DEBUG    rasa.core.actions.forms  - Got mapping '{'type': 'from_entity', 'entity': 'number'}'
+2020-10-23 14:12:58 DEBUG    rasa.core.actions.forms  - Successfully extracted '39' for requested slot 'age'
+2020-10-23 14:12:58 DEBUG    rasa.core.actions.forms  - Validating extracted slots: {'age': '39'}
+2020-10-23 14:12:58 DEBUG    rasa.core.actions.forms  - Request next slot 'favourite_colour'
+2020-10-23 14:12:58 DEBUG    rasa.core.processor  - Action 'example_form' ended with events '[<rasa.shared.core.events.SlotSet object at 0x7f0c2c5a3f40>, <rasa.shared.core.events.SlotSet object at 0x7f0c2c5a1ee0>, BotUttered('What is your favourite colour?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_ask_favourite_colour"}, 1603455178.1488345)]'.
+2020-10-23 14:12:58 DEBUG    rasa.core.processor  - Current slot values: 
+	age: 39
+	favourite_colour: None
+	name: jake
+	requested_slot: favourite_colour
+2020-10-23 14:12:58 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'example_form'}, 'active_loop': {'name': 'example_form'}}]
+2020-10-23 14:12:58 DEBUG    rasa.core.policies.memoization  - There is a memorised next action 'action_listen'
+2020-10-23 14:12:58 DEBUG    rasa.core.policies.rule_policy  - Predicted 'action_listen' after loop 'example_form'.
+2020-10-23 14:12:58 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_2_RulePolicy
+2020-10-23 14:12:58 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2020-10-23 14:12:58 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2020-10-23 14:12:58 DEBUG    rasa.core.lock_store  - Deleted lock for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+What is your favourite colour?
+Your input ->  green                                                                                                                                                                                               
+2020-10-23 14:13:01 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:13:01 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:13:01 DEBUG    rasa.core.lock_store  - Acquired lock for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:13:01 DEBUG    rasa.core.tracker_store  - Recreating tracker for id '5bd3b569276c4441ba8181d38fe73d68'
+2020-10-23 14:13:01 DEBUG    rasa.nlu.classifiers.diet_classifier  - There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2020-10-23 14:13:01 DEBUG    rasa.nlu.selectors.response_selector  - Adding following selector key to message property: default
+2020-10-23 14:13:01 DEBUG    rasa.core.processor  - Received user message 'green' with intent '{'id': 1413644820575064777, 'name': 'inform', 'confidence': 0.9998398423194885}' and entities '[{'entity': 'colour', 'start': 0, 'end': 5, 'confidence_entity': 0.9967171549797058, 'value': 'green', 'extractor': 'DIETClassifier'}]'
+2020-10-23 14:13:01 DEBUG    rasa.core.processor  - Current slot values: 
+	age: 39
+	favourite_colour: None
+	name: jake
+	requested_slot: favourite_colour
+2020-10-23 14:13:01 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 24 events.
+2020-10-23 14:13:01 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'example_form'}, 'active_loop': {'name': 'example_form'}}, {'user': {'intent': 'inform', 'entities': ('colour',)}, 'prev_action': {'action_name': 'action_listen'}, 'active_loop': {'name': 'example_form'}}]
+2020-10-23 14:13:01 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2020-10-23 14:13:01 DEBUG    rasa.core.policies.rule_policy  - Predicted loop 'example_form'.
+2020-10-23 14:13:01 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_2_RulePolicy
+2020-10-23 14:13:01 DEBUG    rasa.core.processor  - Predicted next action 'example_form' with confidence 1.00.
+2020-10-23 14:13:01 DEBUG    rasa.core.actions.forms  - Validating user input 'UserUttered(text: green, intent: {'id': 1413644820575064777, 'name': 'inform', 'confidence': 0.9998398423194885}, entities: [{'entity': 'colour', 'start': 0, 'end': 5, 'confidence_entity': 0.9967171549797058, 'value': 'green', 'extractor': 'DIETClassifier'}])'.
+2020-10-23 14:13:01 DEBUG    rasa.core.actions.forms  - Trying to extract requested slot 'favourite_colour' ...
+2020-10-23 14:13:01 DEBUG    rasa.core.actions.forms  - Got mapping '{'type': 'from_entity', 'entity': 'colour'}'
+2020-10-23 14:13:01 DEBUG    rasa.core.actions.forms  - Successfully extracted 'green' for requested slot 'favourite_colour'
+2020-10-23 14:13:01 DEBUG    rasa.core.actions.forms  - Validating extracted slots: {'favourite_colour': 'green'}
+2020-10-23 14:13:01 DEBUG    rasa.core.actions.forms  - Deactivating the form 'example_form'
+2020-10-23 14:13:01 DEBUG    rasa.core.processor  - Action 'example_form' ended with events '[<rasa.shared.core.events.SlotSet object at 0x7f0c2c5604f0>, <rasa.shared.core.events.SlotSet object at 0x7f0c2c39ef10>, <rasa.shared.core.events.ActiveLoop object at 0x7f0c2c39e2b0>]'.
+2020-10-23 14:13:01 DEBUG    rasa.core.processor  - Current slot values: 
+	age: 39
+	favourite_colour: green
+	name: jake
+	requested_slot: None
+2020-10-23 14:13:01 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'example_form'}}]
+2020-10-23 14:13:01 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2020-10-23 14:13:01 DEBUG    rasa.core.policies.rule_policy  - Current tracker state: [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'example_form'}}]
+2020-10-23 14:13:01 DEBUG    rasa.core.policies.rule_policy  - There is a rule for the next action 'utter_slots_values'.
+2020-10-23 14:13:01 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_2_RulePolicy
+2020-10-23 14:13:01 DEBUG    rasa.core.processor  - Predicted next action 'utter_slots_values' with confidence 1.00.
+2020-10-23 14:13:01 DEBUG    rasa.core.processor  - Action 'utter_slots_values' ended with events '[BotUttered('Thanks, jake. You're 39 years old and your favourite colour is green', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_slots_values"}, 1603455181.2736142)]'.
+2020-10-23 14:13:01 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'example_form'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_slots_values'}}]
+2020-10-23 14:13:01 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2020-10-23 14:13:01 DEBUG    rasa.core.policies.rule_policy  - Current tracker state: [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'example_form'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_slots_values'}}]
+2020-10-23 14:13:01 DEBUG    rasa.core.policies.rule_policy  - There is a rule for the next action 'utter_assistance'.
+2020-10-23 14:13:01 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_2_RulePolicy
+2020-10-23 14:13:01 DEBUG    rasa.core.processor  - Predicted next action 'utter_assistance' with confidence 1.00.
+2020-10-23 14:13:01 DEBUG    rasa.core.processor  - Action 'utter_assistance' ended with events '[BotUttered('What can I do for you?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_assistance"}, 1603455181.2815425)]'.
+2020-10-23 14:13:01 DEBUG    rasa.core.policies.memoization  - Current tracker state [{'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'example_form'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_slots_values'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_assistance'}}]
+2020-10-23 14:13:01 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2020-10-23 14:13:01 DEBUG    rasa.core.policies.rule_policy  - Current tracker state: [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'example_form'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_slots_values'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_assistance'}}]
+2020-10-23 14:13:01 DEBUG    rasa.core.policies.rule_policy  - There is a rule for the next action 'action_listen'.
+2020-10-23 14:13:01 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_2_RulePolicy
+2020-10-23 14:13:01 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2020-10-23 14:13:01 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2020-10-23 14:13:01 DEBUG    rasa.core.lock_store  - Deleted lock for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+Thanks, jake. You're 39 years old and your favourite colour is green
+What can I do for you?
+Your input ->  /nlu_fallback                                                                                                                                                                                       
+2020-10-23 14:13:08 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:13:08 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:13:08 DEBUG    rasa.core.lock_store  - Acquired lock for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:13:08 DEBUG    rasa.core.tracker_store  - Recreating tracker for id '5bd3b569276c4441ba8181d38fe73d68'
+2020-10-23 14:13:08 DEBUG    rasa.core.processor  - Received user message '/nlu_fallback' with intent '{'name': 'nlu_fallback', 'confidence': 1.0}' and entities '[]'
+2020-10-23 14:13:08 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 34 events.
+2020-10-23 14:13:08 DEBUG    rasa.core.policies.memoization  - Current tracker state [{'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'example_form'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_slots_values'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_assistance'}}, {'user': {'intent': 'nlu_fallback'}, 'prev_action': {'action_name': 'action_listen'}}]
+2020-10-23 14:13:08 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2020-10-23 14:13:08 DEBUG    rasa.core.policies.rule_policy  - Current tracker state: [{}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_greet'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'example_form'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_slots_values'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_assistance'}}, {'user': {'intent': 'nlu_fallback'}, 'prev_action': {'action_name': 'action_listen'}}]
+2020-10-23 14:13:08 DEBUG    rasa.core.policies.rule_policy  - There is a rule for the next action 'action_two_stage_fallback'.
+2020-10-23 14:13:08 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_2_RulePolicy
+2020-10-23 14:13:08 DEBUG    rasa.core.processor  - Predicted next action 'action_two_stage_fallback' with confidence 1.00.
+2020-10-23 14:13:08 DEBUG    rasa.core.processor  - Action 'action_two_stage_fallback' ended with events '[<rasa.shared.core.events.ActiveLoop object at 0x7f0c2c28b760>, BotUttered('Did you mean 'nlu_fallback'?', {"elements": null, "quick_replies": null, "buttons": [{"title": "Yes", "payload": "/nlu_fallback"}, {"title": "No", "payload": "/out_of_scope"}], "attachment": null, "image": null, "custom": null}, {"template_name": "action_default_ask_affirmation"}, 1603455188.6993973)]'.
+2020-10-23 14:13:08 DEBUG    rasa.core.processor  - Current slot values: 
+	age: 39
+	favourite_colour: green
+	name: jake
+	requested_slot: None
+2020-10-23 14:13:08 DEBUG    rasa.core.policies.memoization  - Current tracker state [{'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'example_form'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_slots_values'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_assistance'}}, {'user': {'intent': 'nlu_fallback'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'nlu_fallback'}, 'prev_action': {'action_name': 'action_two_stage_fallback'}, 'active_loop': {'name': 'action_two_stage_fallback'}}]
+2020-10-23 14:13:08 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2020-10-23 14:13:08 DEBUG    rasa.core.policies.rule_policy  - Predicted 'action_listen' after loop 'action_two_stage_fallback'.
+2020-10-23 14:13:08 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_2_RulePolicy
+2020-10-23 14:13:08 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2020-10-23 14:13:08 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2020-10-23 14:13:08 DEBUG    rasa.core.lock_store  - Deleted lock for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+? Did you mean 'nlu_fallback'?  2: No (/out_of_scope)                                                                                                                                                              
+2020-10-23 14:13:10 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:13:10 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:13:10 DEBUG    rasa.core.lock_store  - Acquired lock for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:13:10 DEBUG    rasa.core.tracker_store  - Recreating tracker for id '5bd3b569276c4441ba8181d38fe73d68'
+2020-10-23 14:13:10 DEBUG    rasa.core.processor  - Received user message '/out_of_scope' with intent '{'name': 'out_of_scope', 'confidence': 1.0}' and entities '[]'
+2020-10-23 14:13:10 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 39 events.
+2020-10-23 14:13:10 DEBUG    rasa.core.policies.memoization  - Current tracker state [{'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_slots_values'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_assistance'}}, {'user': {'intent': 'nlu_fallback'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'nlu_fallback'}, 'prev_action': {'action_name': 'action_two_stage_fallback'}, 'active_loop': {'name': 'action_two_stage_fallback'}}, {'user': {'intent': 'out_of_scope'}, 'prev_action': {'action_name': 'action_listen'}, 'active_loop': {'name': 'action_two_stage_fallback'}}]
+2020-10-23 14:13:10 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2020-10-23 14:13:10 DEBUG    rasa.core.policies.rule_policy  - Predicted loop 'action_two_stage_fallback'.
+2020-10-23 14:13:10 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_2_RulePolicy
+2020-10-23 14:13:10 DEBUG    rasa.core.processor  - Predicted next action 'action_two_stage_fallback' with confidence 1.00.
+2020-10-23 14:13:10 DEBUG    rasa.core.processor  - Action 'action_two_stage_fallback' ended with events '[BotUttered('I'm sorry, I didn't quite understand that. Could you rephrase?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_ask_rephrase"}, 1603455190.651777)]'.
+2020-10-23 14:13:10 DEBUG    rasa.core.processor  - Current slot values: 
+	age: 39
+	favourite_colour: green
+	name: jake
+	requested_slot: None
+2020-10-23 14:13:10 DEBUG    rasa.core.policies.memoization  - Current tracker state [{'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'example_form'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_slots_values'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_assistance'}}, {'user': {'intent': 'nlu_fallback'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'nlu_fallback'}, 'prev_action': {'action_name': 'action_two_stage_fallback'}, 'active_loop': {'name': 'action_two_stage_fallback'}}]
+2020-10-23 14:13:10 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2020-10-23 14:13:10 DEBUG    rasa.core.policies.rule_policy  - Predicted 'action_listen' after loop 'action_two_stage_fallback'.
+2020-10-23 14:13:10 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_2_RulePolicy
+2020-10-23 14:13:10 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2020-10-23 14:13:10 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2020-10-23 14:13:10 DEBUG    rasa.core.lock_store  - Deleted lock for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+I'm sorry, I didn't quite understand that. Could you rephrase?
+Your input ->  tell me a joke                                                                                                                                                                                      
+2020-10-23 14:13:16 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:13:16 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:13:16 DEBUG    rasa.core.lock_store  - Acquired lock for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+2020-10-23 14:13:16 DEBUG    rasa.core.tracker_store  - Recreating tracker for id '5bd3b569276c4441ba8181d38fe73d68'
+2020-10-23 14:13:16 DEBUG    rasa.nlu.classifiers.diet_classifier  - There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2020-10-23 14:13:16 DEBUG    rasa.nlu.selectors.response_selector  - Adding following selector key to message property: default
+2020-10-23 14:13:16 DEBUG    rasa.core.processor  - Received user message 'tell me a joke' with intent '{'id': -3579625841406294560, 'name': 'tell_joke', 'confidence': 0.9999870657920837}' and entities '[]'
+2020-10-23 14:13:16 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 43 events.
+2020-10-23 14:13:16 DEBUG    rasa.core.policies.memoization  - Current tracker state [{'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_slots_values'}}, {'user': {'intent': 'greet'}, 'prev_action': {'action_name': 'utter_assistance'}}, {'user': {'intent': 'nlu_fallback'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'nlu_fallback'}, 'prev_action': {'action_name': 'action_two_stage_fallback'}, 'active_loop': {'name': 'action_two_stage_fallback'}}, {'user': {'intent': 'tell_joke'}, 'prev_action': {'action_name': 'action_listen'}, 'active_loop': {'name': 'action_two_stage_fallback'}}]
+2020-10-23 14:13:16 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2020-10-23 14:13:16 DEBUG    rasa.core.policies.rule_policy  - Predicted loop 'action_two_stage_fallback'.
+2020-10-23 14:13:16 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_2_RulePolicy
+2020-10-23 14:13:16 DEBUG    rasa.core.processor  - Predicted next action 'action_two_stage_fallback' with confidence 1.00.
+2020-10-23 14:13:16 DEBUG    rasa.core.processor  - Action 'action_two_stage_fallback' ended with events '[<rasa.shared.core.events.ActiveLoop object at 0x7f0c2c0474f0>, <rasa.shared.core.events.UserUtteranceReverted object at 0x7f0c2c0471f0>, <rasa.shared.core.events.UserUtteranceReverted object at 0x7f0c2c0509d0>, <rasa.shared.core.events.ActionExecuted object at 0x7f0c2c050730>, <rasa.shared.core.events.UserUttered object at 0x7f0c2c050b20>]'.
+2020-10-23 14:13:16 DEBUG    rasa.core.processor  - Current slot values: 
+	age: None
+	favourite_colour: None
+	name: None
+	requested_slot: None
+2020-10-23 14:13:16 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'tell_joke'}, 'prev_action': {'action_name': 'action_listen'}}]
+2020-10-23 14:13:16 DEBUG    rasa.core.policies.memoization  - There is a memorised next action 'utter_joke'
+2020-10-23 14:13:16 DEBUG    rasa.core.policies.rule_policy  - Current tracker state: [{}, {'user': {'intent': 'tell_joke'}, 'prev_action': {'action_name': 'action_listen'}}]
+2020-10-23 14:13:16 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2020-10-23 14:13:16 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_0_MemoizationPolicy
+2020-10-23 14:13:16 DEBUG    rasa.core.processor  - Predicted next action 'utter_joke' with confidence 1.00.
+2020-10-23 14:13:16 DEBUG    rasa.core.processor  - Action 'utter_joke' ended with events '[BotUttered('Okay, None, how's this one?
+What is black and white and goes haha? The penguin that pushed him.
+', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"template_name": "utter_joke"}, 1603455196.834555)]'.
+2020-10-23 14:13:16 DEBUG    rasa.core.policies.memoization  - Current tracker state [{}, {'user': {'intent': 'tell_joke'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'tell_joke'}, 'prev_action': {'action_name': 'utter_joke'}}]
+2020-10-23 14:13:16 DEBUG    rasa.core.policies.memoization  - There is a memorised next action 'action_listen'
+2020-10-23 14:13:16 DEBUG    rasa.core.policies.rule_policy  - Current tracker state: [{}, {'user': {'intent': 'tell_joke'}, 'prev_action': {'action_name': 'action_listen'}}, {'user': {'intent': 'tell_joke'}, 'prev_action': {'action_name': 'utter_joke'}}]
+2020-10-23 14:13:16 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2020-10-23 14:13:16 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_0_MemoizationPolicy
+2020-10-23 14:13:16 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2020-10-23 14:13:16 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2020-10-23 14:13:16 DEBUG    rasa.core.lock_store  - Deleted lock for conversation '5bd3b569276c4441ba8181d38fe73d68'.
+Okay, None, how's this one?
+What is black and white and goes haha? The penguin that pushed him.
+Your input ->                                                                                                                                                                                                      
