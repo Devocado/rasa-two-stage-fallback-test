@@ -3,6 +3,7 @@ version: "2.0"
 intents:
   - greet
   - inform
+  - tell_joke
 
 entities:
 - colour
@@ -50,7 +51,9 @@ responses:
   utter_assistance:
   - text: What can I do for you?
   utter_joke:
-  - text: What is black and white and goes haha? The penguin that pushed him.
+  - text: |
+      Okay, {name}, how's this one?
+      What is black and white and goes haha? The penguin that pushed him.
 
 session_config:
   session_expiration_time: 60
